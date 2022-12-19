@@ -1,0 +1,7 @@
+shiny:
+  image:
+    repository: cthiounn/ensae-cloudcomputing
+    tag: "main"
+  ingress:
+    enabled: true
+    hostname: ensae-3a-cloudcomputing.lab.sspcloud.fr
