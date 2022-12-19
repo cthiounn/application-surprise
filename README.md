@@ -1,1 +1,0 @@
-Dans cette application nous rendons disponible notre portfolio avec une partie cartographie et une partie génération de Pokémons
