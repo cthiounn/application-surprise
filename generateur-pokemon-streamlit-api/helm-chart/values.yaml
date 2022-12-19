@@ -1,0 +1,14 @@
+shiny:
+  image:
+    repository: cthiounn/ensae-pokemon-3a-cloud-computing
+    tag: "latest"
+  ingress:
+    enabled: true
+    hostname: ensae-pokemon-3a-cloud-computing.lab.sspcloud.fr
+  resources:
+    requests:
+      nvidia.com/gpu: 1
+    limits:
+      nvidia.com/gpu: 1
+  probe:
+    enabled: false
