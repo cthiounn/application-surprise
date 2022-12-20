@@ -1,0 +1,123 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+<h1>Testing out Flask</h1>
+ <center><h3>Paris map</h3><img src="{{ user_image }}" alt="Test" height="240px" width="300px"></center>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div style="padding-left:16px">
+  <h2>Paris map</h2>
+
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+
+<html>
+<title>Test on map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<!--<h2 class="w3-center">2015</h2>-->
+
+<div class="w3-content w3-display-container">
+
+  <div class="w3-display-container mySlides">
+  
+    <div class="w3-display-topmiddle">
+  
+      <img src="/static/IMG/graph_1990.svg"width:80%">
+      <!--<img src="/static/IMG/graph.png"width:80%"> -->
+      <!-- <img src="{{ url_for('static', filename='IMG/graph.svg') }}" /> -->
+  
+    </div>
+  
+    </div>
+  
+  </div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+var images = document.getElementsByClassName("mySlides")
+for (i = 0; i < images.length; i++) {
+  var instance = panzoom(images[i]); 
+}
+</script>
+
+    </div>
+    
+
+</body>
+</html>
+
