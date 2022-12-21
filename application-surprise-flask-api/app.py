@@ -11,4 +11,8 @@ app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 def index():
     return render_template('index.html')
 
+@app.route('/music/')
+def music():
+    return render_template('music.html')
+
 # para rodar: botar flask run no terminal
