@@ -1,0 +1,13 @@
+LOAD CSV WITH HEADERS FROM "file:///movies_1990.csv" AS row with row where row.actor_3_name is not null
+MERGE (actor1:Actor1 {name: row.actor_1_name})
+MERGE (actor2:Actor2 {name: row.actor_2_name})
+MERGE (actor3:Actor3 {name: row.actor_3_name})
+MERGE (director:Director {name: row.director_name})
+MERGE (actor1)-[r:WORKED_WITH]->(actor2)
+MERGE (actor1)-[k:DIRECTED_BY]->(director)
+SET r.title=row.movie_title
+SET k.title=row.movie_title
+SET r.score=row.imdb_score
+SET k.score=row.imdb_score
+SET r.year=row.title_year
+SET k.year=row.title_year
