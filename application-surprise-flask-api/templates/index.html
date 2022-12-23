@@ -2,7 +2,8 @@
 <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
 
 <html>
-<title>Test on map</title>
+<title>Mon Petit Portfolio
+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -109,61 +110,39 @@ nav a {
   
   <nav>
     <ul>
-      <li><a href="/">Paris Map Zoom</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/cinema/">Actor-Director graph</a></li>
+      <li><a href="/cinema/interactive/">Interactive Actor-Director graph</a></li>
       <li><a href="/music/">Music 30 Days Challenge Map</a></li>
       <li><a href="https://ensae-pokemon-3a-cloud-computing.lab.sspcloud.fr/">Pokemon generator</a></li>
+      <li><a href="/about/">About</a></li>
     </ul>
   </nav> 
   
 </header>
 <body>
+<h1>Welcome to our little portfolio app, proudly hosted on the sspcloud</h1>
 
-<!--<h2 class="w3-center">2015</h2>-->
+<p> Our portfolio showcases multiple examples of dataviz, from simple map to advanced computer vision. We hope you will find something useful from our examples.
+The code is available at <a href="https://gitlab.com/lucie.mc.tournier/application-surprise">Gitlab</a>
+</p>
 
-<div class="w3-content w3-display-container">
-
-  <div class="w3-display-container mySlides">
+<p>
+  Our examples showcase :
   
-    <div class="w3-display-topmiddle">
-  
-      <!-- <img src="/static/IMG/paris_map.jpg"width:80%"> -->
-      <img src="{{ url_for('static', filename='IMG/paris_map.jpg') }}" />
-  
-    </div>
-  
-    </div>
-  
-  </div>
-
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-var images = document.getElementsByClassName("mySlides")
-for (i = 0; i < images.length; i++) {
-  var instance = panzoom(images[i]); 
-}
-</script>
-
-    </div>
-    
-
+  <li>
+    <ol>Neo4j</ol>
+    <ol>Plotly</ol>
+    <ol>Folium</ol>
+    <ol>Flask</ol>
+    <ol>Stable Diffusion</ol>
+    <ol>Rembg</ol>
+    <ol>Streamlit</ol>
+    <ol>Docker</ol>
+    <ol>Kubernetes</ol>
+    <ol>Helm</ol>
+  </li>
+</p>
 </body>
 </html>
 
