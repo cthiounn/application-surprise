@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon Petit Portfolio
+  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+
+<html>
+<title>Test on map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+  .mySlides {display:none;}
+  header {
+    overflow: hidden;
+    background: #222;
+  }
+  
+  header a, header label {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+  }
+  
+  header a:hover, header label:hover { color: #aaa; }
+  
+  header label {
+    float: right;
+    padding: 18px 20px;
+    cursor: pointer;
+  }
+  
+  header label:after {
+    content: "\2261";
+    font-size: 1.8em;
+  }
+  
+  .logo {
+    float: left;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+    
+  nav {
+    float: right;
+    max-height: 0;
+    width: 100%;
+    -webkit-transition: max-height 0.3s; 
+       -moz-transition: max-height 0.3s;
+         -o-transition: max-height 0.3s;
+            transition: max-height 0.3s;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+     padding-bottom: 10px;
+  }
+    
+  nav li {
+    display: block;
+    text-align: center;
+  }
+    
+  nav a {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  #nav { display: none; }
+  
+  #nav:checked ~ nav {
+    max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+  }
+  
+  @media only screen and (min-width: 700px) {
+    
+    header label { display: none; }
+    
+    nav {
+      width: auto;
+      max-height: none;
+    }
+    
+    nav ul {
+      padding: 0;
+      padding-right: 10px;
+    }
+    
+    nav li {
+      display: inline-block;
+      text-align: left;
+    }
+    
+    header nav a {
+      display: inline-block;
+      padding: 20px 10px;
+      width: auto;
+    }
+    
+  }
+  
+  </style>
+  <header>
+    
+    <a class="logo" href="#">Mon Petit Portfolio</a>
+    
+    <input id="nav" type="checkbox">
+    <label for="nav"></label>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cinema/">Actor-Director graph</a></li>
+        <li><a href="/cinema/interactive/">Interactive Actor-Director graph</a></li>
+        <li><a href="/music/">Music 30 Days Challenge Map</a></li>
+        <li><a href="https://ensae-pokemon-3a-cloud-computing.lab.sspcloud.fr/">Pokemon generator</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav> 
+    
+  </header>
+  <body>
+
+<!--<h2 class="w3-center">2015</h2>-->
+
+<div style="padding-left:16px">
+  <h2>Actor-Director Graph for movies until 1990: Force-based</h2>
+
+</div>
+<div class="w3-content w3-display-container">
+
+  <div class="w3-display-container mySlides">
+  
+    <div class="w3-display-topmiddle">
+  
+      <!--<img src="/static/IMG/new_graph_1990.svg"width:80%">-->
+      <img src="/static/IMG/graph.png" alt="Test" height="800px" width="800px"> 
+      <!-- <img src="{{ url_for('static', filename='IMG/graph.svg') }}" /> -->
+  
+    </div>
+  
+    </div>
+  
+  </div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+var images = document.getElementsByClassName("mySlides")
+for (i = 0; i < images.length; i++) {
+  var instance = panzoom(images[i]); 
+}
+</script>
+
+    </div>
+    
+
+</body>
+</html>
+

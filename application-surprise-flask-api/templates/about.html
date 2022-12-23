@@ -1,0 +1,136 @@
+<html>
+  <title>Mon Petit Portfolio
+  </title>
+    <style>
+        .mySlides {display:none;}
+        header {
+          overflow: hidden;
+          background: #222;
+        }
+        
+        header a, header label {
+          display: block;
+          padding: 20px;
+          color: #fff;
+          text-decoration: none;
+          line-height: 20px;
+        }
+        
+        header a:hover, header label:hover { color: #aaa; }
+        
+        header label {
+          float: right;
+          padding: 18px 20px;
+          cursor: pointer;
+        }
+        
+        header label:after {
+          content: "\2261";
+          font-size: 1.8em;
+        }
+        
+        .logo {
+          float: left;
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+          
+        nav {
+          float: right;
+          max-height: 0;
+          width: 100%;
+          -webkit-transition: max-height 0.3s; 
+             -moz-transition: max-height 0.3s;
+               -o-transition: max-height 0.3s;
+                  transition: max-height 0.3s;
+        }
+        
+        nav ul {
+          margin: 0;
+          padding: 0;
+           padding-bottom: 10px;
+        }
+          
+        nav li {
+          display: block;
+          text-align: center;
+        }
+          
+        nav a {
+          padding: 10px;
+          width: 100%;
+        }
+        
+        #nav { display: none; }
+        
+        #nav:checked ~ nav {
+          max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+        }
+        
+        @media only screen and (min-width: 700px) {
+          
+          header label { display: none; }
+          
+          nav {
+            width: auto;
+            max-height: none;
+          }
+          
+          nav ul {
+            padding: 0;
+            padding-right: 10px;
+          }
+          
+          nav li {
+            display: inline-block;
+            text-align: left;
+          }
+          
+          header nav a {
+            display: inline-block;
+            padding: 20px 10px;
+            width: auto;
+          }
+          
+        }
+        
+        </style>
+        <header>
+          
+          <a class="logo" href="#">Mon Petit Portfolio</a>
+          
+          <input id="nav" type="checkbox">
+          <label for="nav"></label>
+          
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/cinema/">Actor-Director graph</a></li>
+              <li><a href="/cinema/interactive/">Interactive Actor-Director graph</a></li>
+              <li><a href="/music/">Music 30 Days Challenge Map</a></li>
+              <li><a href="https://ensae-pokemon-3a-cloud-computing.lab.sspcloud.fr/">Pokemon generator</a></li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+          </nav> 
+          
+        </header>
+
+<body>
+<h1>About this website</h1>
+
+<p>It was done in an educational purpose for the Cloud computing course of ENSAE by
+Beatriz Farah, Lucie Tournier, Fyras Telmini and Conrad Thiounn. It is the final product of hundreds of hours of hard work, in data/ML/devops.
+</p>
+
+<p> Actor-Director graph was done by Beatriz using neo4j. The resulting image can be zoomed with the mouse.</p>
+
+<p> Interactive Actor-Director graph was also done by Beatriz using Plotly and is another version, but interactive.</p>
+
+<p> Music 30 Days Challenge Map was done by Conrad using Folium and Wikipedia. It is showcasing a map of countries where the best sold singles artists came from. </p>
+
+<p> Pokemon generator was done by Fyras using Stable diffusion and Rembg and Streamlit. It takes a picture and a prompt and turn into a pokemon image.</p>
+
+<p> All these projects was supervised and directed by Lucie. </p>
+
+</body>
+</html>
